@@ -1,1 +1,128 @@
 # AOL-Machine-Learning
+Game Recommendation System
+
+
+
+Business Understanding
+
+In today’s digital entertainment landscape, gamers often struggle to discover new titles that match their interests. With a massive influx of games released on platforms like Steam, personalized recommendations are crucial to improving user experience and increasing engagement.
+
+A Game Recommendation System helps users find games similar to their preferences based on existing information such as genres, tags, or even game descriptions. This project demonstrates how content-based filtering using Natural Language Processing (NLP) techniques can be applied in this context.
+
+
+
+**Objective**
+
+To build a content-based game recommendation system that can:
+
+* Recommend similar games based on a selected title.
+* Recommend games using specific tags or genres.
+* Recommend games using a description provided by the user.
+
+The system should run as an interactive **Streamlit web application** and deliver relevant recommendations using **TF-IDF vectorization** and **cosine similarity**.
+
+
+
+**About Dataset**
+
+The dataset (`games.csv`) consists of metadata about 20,000 games and includes the following features:
+
+* `AppID`
+* `Name`
+* `Release date`
+* `Tags`
+* `Genres`
+* `Supported languages` (used as description)
+
+Modifications:
+
+* The column `Supported languages` was renamed to `Description`.
+* Only the top 20,000 records were used.
+* Missing values were filled with empty strings.
+
+------------------------------------------------------
+
+**Data Preparation**
+
+1. Column Selection and Renaming
+
+   ![image](https://github.com/user-attachments/assets/4e4cd1f7-553b-40e9-aef0-afa1231112ff)
+
+2. Cleaning and Formatting
+
+* All NaNs in `Tags`, `Genres`, and `Description` were filled with empty strings.
+* The text in these fields was cleaned and formatted by wrapping terms in quotes and sorting alphabetically for consistent vectorization.
+
+3. TF-IDF Vectorization
+
+
+Separate `TfidfVectorizer()` instances were applied to:
+
+* `Tags`
+* `Genres`![Uploading Screenshot 2025-06-04 113911.png…]()
+
+* `Description`
+
+These were then used to create sparse matrices for similarity computation.
+
+![image](https://github.com/user-attachments/assets/5a31b654-6e80-4af4-9a5c-b1f4a42d807c)
+
+
+**Modeling**
+
+Recommendation Techniques:
+
+1. By Game Name
+
+* Input: selected game title.
+* Method: calculate cosine similarity between the selected game’s combined `Tags + Genres` vector and all others.
+* Output: top 20 similar games.
+
+ 2. By Genres or Tags
+
+* Input: one or more tags/genres.
+* Method: transform the input into TF-IDF, calculate cosine similarity with the dataset.
+* Output: top 20 games with matching characteristics.
+
+3. By Description
+
+* Input: free-text game description.
+* Method: transform user description into TF-IDF, compute cosine similarity with game descriptions.
+* Output: top 20 most relevant games.
+
+Each method uses the following function structure:
+
+![image](https://github.com/user-attachments/assets/0db10c6b-984e-46f1-a4e8-0eb76adba086)
+
+Evaluation
+
+The system displays recommendations in a tabular format on a **Streamlit app**. Each result includes:
+
+* Game name
+* Tags
+* Genres
+* Description
+* Similarity score (as a percentage)
+
+Example:
+
+| Name   | Tags          | Genres     | Score (%) |
+| ------ | ------------- | ---------- | --------- |
+| Game A | Action, Indie | Casual     | 98.5      |
+| Game B | Adventure     | Simulation | 97.2      |
+| ...    | ...           | ...        | ...       |
+
+While formal accuracy metrics aren't applicable to unsupervised recommendation systems, the quality of results is measured by:
+
+* Relevance of top results.
+* Consistency across input types.
+* Diversity in recommendations.
+
+
+Conclusion
+
+The **Game Recommendation System** demonstrates that **content-based filtering** using **TF-IDF** and **cosine similarity** is a viable approach for recommending games based on textual features.
+
+With support for multiple input methods (title, genre, and description), it provides flexible discovery paths and is accessible through a simple **Streamlit web UI**.
+
+
