@@ -46,7 +46,8 @@ Modifications:
 
 1. Column Selection and Renaming
 
-   ![image](https://github.com/user-attachments/assets/4e4cd1f7-553b-40e9-aef0-afa1231112ff)
+![image](https://github.com/user-attachments/assets/079908d3-84ae-406d-bb11-1f8a499eb230)
+
 
 2. Cleaning and Formatting
 
@@ -65,7 +66,8 @@ Separate `TfidfVectorizer()` instances were applied to:
 
 These were then used to create sparse matrices for similarity computation.
 
-![image](https://github.com/user-attachments/assets/5a31b654-6e80-4af4-9a5c-b1f4a42d807c)
+![image](https://github.com/user-attachments/assets/4b2fcf82-8e3a-4695-bbda-05375f48b8cf)
+
 
 
 **Modeling**
@@ -92,7 +94,8 @@ Recommendation Techniques:
 
 Each method uses the following function structure:
 
-![image](https://github.com/user-attachments/assets/0db10c6b-984e-46f1-a4e8-0eb76adba086)
+![image](https://github.com/user-attachments/assets/ca19d5dc-d367-467e-833e-968f15d36cf0)
+
 
 Evaluation
 
