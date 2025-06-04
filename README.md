@@ -21,6 +21,49 @@ To build a content-based game recommendation system that can:
 The system should run as an interactive **Streamlit web application** and deliver relevant recommendations using **TF-IDF vectorization** and **cosine similarity**.
 
 
+**Business Problem**
+
+With the growing number of games released annually on platforms like Steam, users often struggle to find titles that align with their interests. Without an effective recommendation system, users may feel overwhelmed and dissatisfied, potentially reducing engagement and retention. This creates a need for a personalized game recommendation system to help users navigate the vast game library.
+
+Key Business Questions:
+
+How can we help users discover games that match their preferences among thousands of available titles?
+
+How can a recommendation system enhance user satisfaction and retention?
+
+
+**Project Scope**
+
+1. Primary Objective
+Develop a game recommendation system using Content-Based Filtering by applying Natural Language Processing (NLP) techniques to analyze game descriptions, tags, and genres.
+
+2. Technical Scope
+
+Utilize a Steam games dataset (from Kaggle).
+
+Perform text preprocessing on description, tags, and genre columns.
+
+Apply TF-IDF vectorization to extract relevant features.
+
+Use cosine similarity to measure game similarity.
+
+Return a ranked list of recommended games based on a selected input game.
+
+3. Project Limitations
+
+Does not include behavior-based or clickstream user data.
+
+No user interface (UI/UX) or production deployment included.
+
+Focuses solely on Content-Based Filtering (not full Collaborative Filtering).
+
+4. Expected Outputs
+
+A recommendation model that suggests similar games based on a single input game.
+
+Subjective evaluation of recommendation quality based on relevance.
+
+
 
 **About Dataset**
 
