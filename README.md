@@ -94,7 +94,8 @@ Recommendation Techniques:
 
 Each method uses the following function structure:
 
-![image](https://github.com/user-attachments/assets/ca19d5dc-d367-467e-833e-968f15d36cf0)
+![image](https://github.com/user-attachments/assets/f703c49f-1887-4501-9f96-c3dc6a82caa6)
+
 
 
 Evaluation
