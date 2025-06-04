@@ -59,7 +59,7 @@ Modifications:
 Separate `TfidfVectorizer()` instances were applied to:
 
 * `Tags`
-* `Genres`![Uploading Screenshot 2025-06-04 113911.png…]()
+* `Genres`
 
 * `Description`
 
