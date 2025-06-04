@@ -8,19 +8,6 @@ In today’s digital entertainment landscape, gamers often struggle to discover 
 
 A Game Recommendation System helps users find games similar to their preferences based on existing information such as genres, tags, or even game descriptions. This project demonstrates how content-based filtering using Natural Language Processing (NLP) techniques can be applied in this context.
 
-
-
-**Objective**
-
-To build a content-based game recommendation system that can:
-
-* Recommend similar games based on a selected title.
-* Recommend games using specific tags or genres.
-* Recommend games using a description provided by the user.
-
-The system should run as an interactive **Streamlit web application** and deliver relevant recommendations using **TF-IDF vectorization** and **cosine similarity**.
-
-
 **Business Problem**
 
 With the growing number of games released annually on platforms like Steam, users often struggle to find titles that align with their interests. Without an effective recommendation system, users may feel overwhelmed and dissatisfied, potentially reducing engagement and retention. This creates a need for a personalized game recommendation system to help users navigate the vast game library.
@@ -31,11 +18,16 @@ How can we help users discover games that match their preferences among thousand
 
 How can a recommendation system enhance user satisfaction and retention?
 
-
 **Project Scope**
 
 1. Primary Objective
-Develop a game recommendation system using Content-Based Filtering by applying Natural Language Processing (NLP) techniques to analyze game descriptions, tags, and genres.
+To build a content-based game recommendation system that can:
+
+* Recommend similar games based on a selected title.
+* Recommend games using specific tags or genres.
+* Recommend games using a description provided by the user.
+
+The system should run as an interactive **Streamlit web application** and deliver relevant recommendations using **TF-IDF vectorization** and **cosine similarity**.
 
 2. Technical Scope
 
@@ -62,7 +54,6 @@ Focuses solely on Content-Based Filtering (not full Collaborative Filtering).
 A recommendation model that suggests similar games based on a single input game.
 
 Subjective evaluation of recommendation quality based on relevance.
-
 
 
 **About Dataset**
