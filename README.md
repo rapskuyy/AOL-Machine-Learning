@@ -1,9 +1,8 @@
-# AOL-Machine-Learning
-Game Recommendation System
+# Game Recommendation System
 
 
 
-Business Understanding
+**Business Understanding**
 
 In today’s digital entertainment landscape, gamers often struggle to discover new titles that match their interests. With a massive influx of games released on platforms like Steam, personalized recommendations are crucial to improving user experience and increasing engagement.
 
